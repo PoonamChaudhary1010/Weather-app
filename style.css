@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Merriweather Sans", sans-serif;
+}
+
+:root {
+    --colorDark1: #112d4e;
+    --colorDark2: #3f72af;
+    --colorLight1: #dbe2ef;
+    --colorLight2: #f9f7f7;
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    color: var(--colorLight2);
+    background-image: linear-gradient(160deg, #112d4e 0%, #3f72af 100%);
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: .8rem;
+}
+
+.tab-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 35rem;
+    margin: 0 auto;
+    margin-top: 3rem;
+    width: 90%;
+}
+
+.tab {
+    cursor: pointer;
+    font-size: .9rem;
+    letter-spacing: .1rem;
+    padding: .3rem .2rem;
+}
+
+.tab.current-tab {
+    background-color: rgba(219, 226, 239, 0.5);
+    border-radius: .3rem;
+}
+
+.weather-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-block: 4rem;
+}
+
+.btn {
+    border: navajowhite;
+    background-color: var(--colorDark2);
+    padding: .3rem 1.5rem;
+    font-size: 1rem;
+    border-radius: .2rem;
+    color: var(--colorLight2);
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.sub-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grantLocation-container {
+    display: none;
+}
+
+.grantLocation-container.active {
+    display: flex;
+}
+
+.grantLocation-container img {
+    margin-bottom: 2rem;
+}
+
+.grantLocation-container p:first-of-type {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.grantLocation-container p:last-of-type {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-top: 0.8rem;
+    margin-bottom: 1.8rem;
+    letter-spacing: .05rem;
+}
+
+.loading-container {
+    display: none;
+}
+
+.loading-container.active {
+    display: flex;
+}
+
+.loading-container p {
+    text-transform: capitalize;
+}
+
+.user-info-container {
+    display: none;
+    width: 90%;
+}
+
+.user-info-container.active {
+    display: flex;
+}
+
+.name{
+    display: flex;
+    align-items: center;
+    gap: 0 .5rem;
+    margin-bottom: 1rem;
+}
+
+.user-info-container img{
+    width: 5.2rem;
+    height: 5.2rem;
+}
+
+.user-info-container p{
+    font-size: 1.5rem;
+    font-weight: 300;
+
+}
+
+.name p{
+    font-size: 2rem;
+}
+
+.name img{
+    width: 2rem;
+    height: 2rem ;
+    object-fit: contain;
+}
+
+.user-info-container p[data-temp]{
+    font-size: 2.8rem;
+    font-weight: 600;
+}
+
+.parameter-container{
+    display: flex;
+    width: 90%;
+    gap: .1rem 1.8rem;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+.parameter-container .parameter{
+  background-color: rgba(219, 226, 239, 0.5) ;
+  padding: 1rem;
+  border: none;
+  width: 30%;
+  max-width: 15rem;
+  border-radius: .2rem;
+  display: flex;
+  flex-direction: column;
+  gap: .4rem 0;
+  align-items: center;
+}
+
+.parameter img{
+    width: 3rem;
+    height: 3rem;
+}
+
+.parameter p:first-of-type{
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.parameter p:last-of-type{
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+
+.form-container{
+    display: none;
+    width: 90%;
+    max-width: 35rem;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 0 .4rem;
+    margin-bottom: 1rem;
+}
+
+.form-container.active{
+    display: flex;
+}
+
+.form-container input{
+    background-color: rgba(219, 226, 239, 0.5);
+    border: none;
+    border-radius: .6rem;
+    height: 2rem;
+    padding-left: 1rem;
+    padding-right: 6rem;
+    color: var(--colorLight1);
+}
+
+.form-container input::placeholder{
+    color:var(--colorLight2);
+}
+
+.form-container input:focus{
+    outline: .1rem solid rgb(240, 228, 228,0.7);
+}
+
+.form-container .btn{
+    padding: unset;
+    width:2.4rem;
+    height: 2.4rem;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom:.2rem;
+}
